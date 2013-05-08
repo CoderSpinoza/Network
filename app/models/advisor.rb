@@ -1,6 +1,6 @@
 class Advisor < ActiveRecord::Base
   # attr_accessible :title, :body
-  require 'CSV'
+  require 'csv'
   default_scope order('last_name ASC')
 
   has_many :relationships, :class_name => "Relationship", :foreign_key => "mentor_id"
